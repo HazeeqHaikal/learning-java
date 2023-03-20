@@ -18,5 +18,28 @@ class variables{
         char copyrightSymbol = '\u00A9';
 
         System.out.println("This is the copyright symbol: " + copyrightSymbol);
+
+        System.out.println();
+
+        int number1 = 5;
+        double number2 = number1;
+        System.out.println("number1: " + number1);
+        System.out.println("number2: " + number2);
+
+        // int to double is allowed
+
+        System.out.println();
+
+        // double num1 = 5;
+        // int num2 = num1;
+
+        // System.out.println("num1: " + num1);
+        // System.out.println("num2: " + num2); double to int is not allowed
+
+        double num1 = 5.8;
+        int num2 = (int) num1;
+
+        System.out.println("num1: " + num1);
+        System.out.println("num2: " + num2); // double to int is allowed with casting
     }
 }
