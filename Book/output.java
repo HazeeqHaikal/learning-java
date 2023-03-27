@@ -1,14 +1,21 @@
 import java.time.LocalDate;
-
-import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 public class output {
     public static void main(String[] args) {
-        User youngerUser = new User();
+        User user = new User("John", "2004-04-24");
 
-        youngerUser.name = "John";
-        youngerUser.birthDay = LocalDate.parse("2004-04-24");
+        Book book = new Book();
 
-        System.out.printf("%s was born on %s", youngerUser.name, youngerUser.birthDay.toString());
+        book.title = "The Lord of the Rings";
+        book.author = "J.R.R. Tolkien";
+
+        user.borrow(book);
+
+        System.out.printf("%s was born on %s and he is now %d years old", user.name,
+                user.birthDay.format(DateTimeFormatter.ofPattern("dd MMMM yyyy")), user.age());
+
+        System.out.printf("\n%s borrowed %s by %s", user.name, book.title, book.author);
+
     }
 }
