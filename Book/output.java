@@ -1,21 +1,15 @@
-import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
 public class output {
     public static void main(String[] args) {
+        // abstraction is hiding the complexities behind the scenes by using getter and setter methods
+
+        // constructor is a method that is called when an object is created
         User user = new User("John", "2004-04-24");
 
-        Book book = new Book();
+        Book HarryPotter = new Book("Harry Potter", "J.K. Rowling", 369);
+        AudioBook Dracula = new AudioBook("Dracula", "Bram Stoker", 300);
 
-        book.title = "The Lord of the Rings";
-        book.author = "J.R.R. Tolkien";
-
-        user.borrow(book);
-
-        System.out.printf("%s was born on %s and he is now %d years old", user.name,
-                user.birthDay.format(DateTimeFormatter.ofPattern("dd MMMM yyyy")), user.age());
-
-        System.out.printf("\n%s borrowed %s by %s", user.name, book.title, book.author);
-
+        System.out.println(Dracula.toString());
     }
 }
